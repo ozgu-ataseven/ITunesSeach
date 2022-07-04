@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SectionHeaderView" id="U6b-Vx-4bR" customClass="SectionHeaderView" customModule="ItunesSearchApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="43"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="H2n-a7-tiK">
+                    <rect key="frame" x="20" y="5" width="356" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <segments>
+                        <segment title="Movies"/>
+                        <segment title="Music"/>
+                        <segment title="Ebook"/>
+                        <segment title="Podcast"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
+                    <connections>
+                        <action selector="segmentValueChanged:" destination="U6b-Vx-4bR" eventType="valueChanged" id="VUt-lw-Lk9"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="H2n-a7-tiK" secondAttribute="bottom" constant="5" id="2dP-JU-BHe"/>
+                <constraint firstItem="H2n-a7-tiK" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="20" id="U1R-Ow-4fz"/>
+                <constraint firstItem="H2n-a7-tiK" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="5" id="agb-xZ-Rce"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="H2n-a7-tiK" secondAttribute="trailing" constant="20" id="cu7-B3-SLE"/>
+            </constraints>
+            <connections>
+                <outlet property="segmentedControl" destination="H2n-a7-tiK" id="nMb-iN-n0M"/>
+            </connections>
+            <point key="canvasLocation" x="192.75362318840581" y="87.388392857142847"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
